@@ -16,7 +16,7 @@ A modern, vanilla JavaScript library for creating stunning page-turn effects in 
 ## Installation 📦
 
 ```bash
-npm install vanilla-turn
+npm install vanilla-turn 
 ```
 
 ## Usage 🚀
