@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Turn.js Demo</title>
+    <style>
+        #magazine {
+            width: 800px;
+            height: 600px;
+            margin: 50px auto;
+        }
+        
+        .page {
+            background-color: #f7f7f7;
+            border: 1px solid #ddd;
+            padding: 20px;
+        }
+        
+        .page-content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div id="magazine">
+        <div class="page">
+            <div class="page-content">Front Cover</div>
+        </div>
+        <div class="page">
+            <div class="page-content">Page 1</div>
+        </div>
+        <div class="page">
+            <div class="page-content">Page 2</div>
+        </div>
+        <div class="page">
+            <div class="page-content">Page 3</div>
+        </div>
+        <div class="page">
+            <div class="page-content">Back Cover</div>
+        </div>
+    </div>
+
+    <script type="module">
+        import { Turn } from './dist/turn.es.js';
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const magazine = document.getElementById('magazine');
+            new Turn(magazine, {
+                display: 'double',
+                acceleration: true,
+                gradients: true,
+                elevation: 50,
+                when: {
+                    turned: function(e, page) {
+                        console.log('Current page: ' + page);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
