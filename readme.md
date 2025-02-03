@@ -7,13 +7,9 @@ A modern, vanilla JavaScript library for creating stunning page-turn effects in 
 - **Zero Dependencies**: Pure vanilla JavaScript implementation
 - **Modern Architecture**: Built with ES Modules for tree-shaking and optimal bundling
 - **Multiple Build Formats**: ES Modules and UMD builds available
-- **TypeScript Ready**: Built with type safety in mind
 - **Responsive Design**: Adapts to different screen sizes and orientations
 - **Touch Enabled**: Smooth touch interactions for mobile devices
 - **Customizable**: Extensive options for animations and behaviors
-- **Performance Focused**: Hardware-accelerated animations
-- **SEO Friendly**: Content remains accessible to search engines
-- **A11y Support**: Keyboard navigation and ARIA attributes
 
 ## Installation 📦
 
