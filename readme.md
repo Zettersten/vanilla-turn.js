@@ -2,6 +2,8 @@
 
 A modern, vanilla JavaScript library for creating stunning page-turn effects in web applications. This library is a complete rewrite of the popular Turn.js, eliminating jQuery dependencies and modernizing the codebase for today's web development practices.
 
+**[View Demo](https://zettersten.github.io/vanilla-turn.js/)** | [Documentation](#usage) | [NPM Package](https://www.npmjs.com/package/vanilla-turn)
+
 ## Features ✨
 
 - **Zero Dependencies**: Pure vanilla JavaScript implementation
