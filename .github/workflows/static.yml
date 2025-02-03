@@ -53,8 +53,6 @@ jobs:
           path: |
             index.html
             dist/
-            README.md
-            LICENSE
 
       - name: Deploy to GitHub Pages
         id: deployment
