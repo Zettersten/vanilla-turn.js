@@ -45,11 +45,13 @@
     </div>
 
     <script type="module">
-        import { Turn } from './dist/turn.es.js';
+        const response = await fetch('./dist/manifest.json');
+        const { es: esModule } = await response.json();
+        const { Turn } = await import(`./dist/${esModule}`);
         
         document.addEventListener('DOMContentLoaded', () => {
             const magazine = document.getElementById('magazine');
-            new Turn(magazine, {
+            Turn(magazine, {
                 display: 'double',
                 acceleration: true,
                 gradients: true,

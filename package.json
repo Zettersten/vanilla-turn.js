@@ -2,26 +2,56 @@
   "name": "vanilla-turn",
   "version": "1.0.0",
   "type": "module",
-  "description": "A vanilla alternative to Turn.js (a popular page turn style jquery plugin by Emmanuel Garcia)",
-  "main": "index.js",
+  "description": "A vanilla JavaScript library for creating page turn effects",
+  "main": "./dist/turn.umd.js",
+  "module": "./dist/turn.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/turn.es.js",
+      "require": "./dist/turn.umd.js",
+      "default": "./dist/turn.umd.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
   "scripts": {
     "build": "rollup -c",
-    "dev": "rollup -c -w",
-    "start": "npm run dev"
+    "build:demo": "cross-env BUILD_DEMO=true rollup -c",
+    "dev": "cross-env BUILD_DEMO=true rollup -c -w",
+    "start": "npm run dev",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "prepare": "npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Zettersten/vanilla-turn.js.git"
-  },
+  "keywords": [
+    "page-turn",
+    "flip",
+    "book",
+    "magazine",
+    "vanilla-js"
+  ],
   "author": "Erik Zettersten (erik@zettersten.com)",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Zettersten/vanilla-turn.js/issues"
   },
   "homepage": "https://github.com/Zettersten/vanilla-turn.js#readme",
   "devDependencies": {
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.22.20",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rimraf": "^5.0.5",
     "rollup": "^4.32.1",
+    "rollup-plugin-filesize": "^10.0.0",
     "rollup-plugin-livereload": "^2.0.5",
-    "rollup-plugin-serve": "^2.0.2"
+    "rollup-plugin-serve": "^2.0.2",
+    "cross-env": "^7.0.3"
   }
 }
